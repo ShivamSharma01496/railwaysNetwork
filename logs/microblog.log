@@ -1,0 +1,47 @@
+2020-06-18 18:49:34,667 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
+2020-06-18 18:50:26,547 ERROR: Exception on /rhotspots [POST] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 122, in rhotspots
+    string = form.hspot.data+' is successfully removed from the hotspot list, however database has not been updated yet. Please click on update database button to update the database'
+AttributeError: 'HspotREMForm' object has no attribute 'hspot'
+2020-06-18 18:52:56,437 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
+2020-06-18 19:00:16,634 ERROR: Exception on /update_db [GET] [in C:\Python34\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python34\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Downloads\microblog-0.18\microblog-0.18\app\main\routes.py", line 175, in update_db
+    return redirect(url_for('admin'))
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Python34\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python34\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python34\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Python34\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'admin'. Did you mean 'main.admin' instead?
+2020-06-18 19:02:02,906 INFO: Microblog startup [in E:\Downloads\microblog-0.18\microblog-0.18\app\__init__.py:82]
